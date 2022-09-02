@@ -27,22 +27,13 @@ jobs:
       - run:
           name: API Build
           command: npm run api:build
-  deploy:
-    docker:
-      - image: "cimg/base:stable"
-    steps:
       - run:
           name: Deploy App
-          command: echo hellooo          
+          command: npm run deploy
 workflows:
   udagram:
     jobs:
       - build:
-          filters:
-            branches:
-              only:
-                - master
-      - deploy:
           filters:
             branches:
               only:
