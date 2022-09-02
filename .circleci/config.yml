@@ -31,11 +31,6 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      - node/install:
-          node-version: '14.15' 
-      - eb/setup
-      - aws-cli/setup
-      - checkout
       - run:
           name: Deploy App
           command: echo hellooo          
@@ -47,6 +42,8 @@ workflows:
             branches:
               only:
                 - master
-      # - deploy:
-      #     requires:
-      #       - hold
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
