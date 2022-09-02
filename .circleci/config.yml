@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       - image: "cimg/node:14.15"
-       environment:
+      environment:
           - CHROME_BIN=/usr/bin/google-chrome
     steps:
       - node/install
