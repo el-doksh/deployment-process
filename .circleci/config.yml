@@ -38,7 +38,7 @@ jobs:
       - checkout
       - run:
           name: Deploy App
-          command: "hellooo"            
+          command: echo hellooo          
 workflows:
   udagram:
     jobs:
