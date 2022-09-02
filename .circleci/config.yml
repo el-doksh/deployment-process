@@ -47,6 +47,6 @@ workflows:
             branches:
               only:
                 - master
-      - deploy:
-          requires:
-            - hold
+      # - deploy:
+      #     requires:
+      #       - hold
