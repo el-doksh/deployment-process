@@ -28,9 +28,6 @@ jobs:
           name: API Build
           command: npm run api:build
       - run:
-          name: Front-End Test
-          command: npm run frontend:test
-      - run:
           name: Deploy App
           command: npm run deploy
 workflows:
